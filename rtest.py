@@ -33,3 +33,5 @@ for npage in range(1, npages + 1):
     page = requests.post("https://context.reverso.net/bst-query-service", headers=headers, data=json.dumps(data)).json()["list"]
     for word in page:
         print(BeautifulSoup(word["s_text"]).text, "=", BeautifulSoup(word["t_text"]).text)
+
+print(npages)
